@@ -1,8 +1,11 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shirt } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Hero = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 overflow-hidden">
       {/* Background pattern */}
@@ -23,12 +26,11 @@ const Hero = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Premium Custom Apparel Printing & Embroidery
+            {t('hero.subtitle')}
           </p>
           
           <p className="text-lg text-slate-300 mb-12 max-w-2xl mx-auto">
-            Transform your ideas into stunning custom shirts, hoodies, and apparel. 
-            Professional quality printing and embroidery services for individuals and businesses.
+            {t('hero.description')}
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -36,7 +38,7 @@ const Hero = () => {
               size="lg" 
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
             >
-              Get Custom Quote
+              {t('hero.getQuote')}
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
             
@@ -45,7 +47,7 @@ const Hero = () => {
               size="lg"
               className="border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-8 py-6 text-lg rounded-full transition-all duration-300"
             >
-              View Our Work
+              {t('hero.viewWork')}
             </Button>
           </div>
         </div>

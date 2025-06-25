@@ -1,26 +1,44 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Shirt, Image, Tag } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Services = () => {
+  const { t } = useLanguage();
+
   const services = [
     {
       icon: Shirt,
-      title: "Screen Printing",
-      description: "High-quality screen printing for bulk orders. Perfect for events, teams, and promotional merchandise.",
-      features: ["Vibrant colors", "Durable prints", "Cost-effective for large orders", "Multiple color options"]
+      titleKey: 'services.screenPrint.title',
+      descriptionKey: 'services.screenPrint.description',
+      features: [
+        'services.screenPrint.feature1',
+        'services.screenPrint.feature2',
+        'services.screenPrint.feature3',
+        'services.screenPrint.feature4'
+      ]
     },
     {
       icon: Image,
-      title: "Embroidery",
-      description: "Premium embroidery services for a professional, polished look. Ideal for corporate apparel and uniforms.",
-      features: ["Professional finish", "Long-lasting", "Corporate logos", "Multiple thread colors"]
+      titleKey: 'services.embroidery.title',
+      descriptionKey: 'services.embroidery.description',
+      features: [
+        'services.embroidery.feature1',
+        'services.embroidery.feature2',
+        'services.embroidery.feature3',
+        'services.embroidery.feature4'
+      ]
     },
     {
       icon: Tag,
-      title: "Heat Transfer",
-      description: "Perfect for small orders and detailed designs. Great for personalized gifts and custom artwork.",
-      features: ["Detailed designs", "Photo quality", "Small order friendly", "Quick turnaround"]
+      titleKey: 'services.heatTransfer.title',
+      descriptionKey: 'services.heatTransfer.description',
+      features: [
+        'services.heatTransfer.feature1',
+        'services.heatTransfer.feature2',
+        'services.heatTransfer.feature3',
+        'services.heatTransfer.feature4'
+      ]
     }
   ];
 
@@ -29,11 +47,10 @@ const Services = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
-            Our Services
+            {t('services.title')}
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            From screen printing to embroidery, we offer comprehensive custom apparel solutions 
-            for all your printing needs.
+            {t('services.description')}
           </p>
         </div>
 
@@ -46,17 +63,17 @@ const Services = () => {
                     <service.icon className="w-8 h-8 text-blue-600" />
                   </div>
                 </div>
-                <CardTitle className="text-2xl text-slate-800">{service.title}</CardTitle>
+                <CardTitle className="text-2xl text-slate-800">{t(service.titleKey)}</CardTitle>
                 <CardDescription className="text-slate-600 text-base leading-relaxed">
-                  {service.description}
+                  {t(service.descriptionKey)}
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
+                  {service.features.map((featureKey, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-slate-700">
                       <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                      {feature}
+                      {t(featureKey)}
                     </li>
                   ))}
                 </ul>

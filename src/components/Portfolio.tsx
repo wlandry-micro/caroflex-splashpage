@@ -1,7 +1,10 @@
 
 import { Card, CardContent } from "@/components/ui/card";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Portfolio = () => {
+  const { t } = useLanguage();
+
   const portfolioItems = [
     {
       title: "Corporate T-Shirts",
@@ -46,11 +49,10 @@ const Portfolio = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
-            Our Work
+            {t('portfolio.title')}
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Take a look at some of our recent projects. From corporate apparel to custom designs, 
-            we bring your vision to life with precision and quality.
+            {t('portfolio.description')}
           </p>
         </div>
 

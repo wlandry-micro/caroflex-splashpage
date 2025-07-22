@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Contact = () => {
@@ -74,9 +74,8 @@ const Contact = () => {
                   <div>
                     <h3 className="text-xl font-semibold mb-2">{t('contact.visit.title')}</h3>
                     <p className="text-slate-300">
-                      123 Printing Street<br />
-                      Downtown Business District<br />
-                      Your City, ST 12345
+                      276 Marie St.<br />
+                      Beresford, NB E8K 1P3
                     </p>
                   </div>
                 </div>
@@ -89,8 +88,9 @@ const Contact = () => {
                   <Phone className="w-6 h-6 text-blue-400 mt-1" />
                   <div>
                     <h3 className="text-xl font-semibold mb-2">{t('contact.call.title')}</h3>
-                    <p className="text-slate-300 text-lg">(555) 123-FLEX</p>
-                    <p className="text-slate-400">Monday - Friday: 8AM - 6PM</p>
+                    <p className="text-slate-300 text-lg">(506) 350-1233</p>
+                    <p className="text-slate-400">Monday - Thursday: 9am - 4pm</p>
+                    <p className="text-slate-400">Closed on Friday, Saturday & Sunday</p>
                   </div>
                 </div>
               </CardContent>
@@ -102,26 +102,13 @@ const Contact = () => {
                   <Mail className="w-6 h-6 text-blue-400 mt-1" />
                   <div>
                     <h3 className="text-xl font-semibold mb-2">{t('contact.email.title')}</h3>
-                    <p className="text-slate-300">info@caroflex.com</p>
+                    <p className="text-slate-300">design@caroflex.ca</p>
                     <p className="text-slate-400">We respond within 24 hours</p>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="bg-blue-600 border-blue-500 text-white">
-              <CardContent className="p-8">
-                <div className="flex items-start space-x-4">
-                  <Clock className="w-6 h-6 text-blue-200 mt-1" />
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">{t('contact.turnaround.title')}</h3>
-                    <p className="text-blue-100">
-                      {t('contact.turnaround.description')}
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </div>

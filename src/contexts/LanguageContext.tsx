@@ -58,8 +58,6 @@ const translations = {
     'contact.visit.title': 'Visit Our Shop',
     'contact.call.title': 'Call Us',
     'contact.email.title': 'Email Us',
-    'contact.turnaround.title': 'Quick Turnaround',
-    'contact.turnaround.description': 'Most orders completed within 5-7 business days. Rush orders available for urgent needs.',
     
     // Footer
     'footer.description': 'Your trusted partner for premium custom apparel printing and embroidery services. Quality craftsmanship, competitive pricing, and exceptional customer service.',
@@ -117,8 +115,6 @@ const translations = {
     'contact.visit.title': 'Visitez Notre Boutique',
     'contact.call.title': 'Appelez-Nous',
     'contact.email.title': 'Envoyez-nous un Email',
-    'contact.turnaround.title': 'Délai Rapide',
-    'contact.turnaround.description': 'La plupart des commandes terminées sous 5-7 jours ouvrables. Commandes urgentes disponibles pour besoins urgents.',
     
     // Footer
     'footer.description': 'Votre partenaire de confiance pour les services d\'impression et de broderie de vêtements personnalisés premium. Artisanat de qualité, prix compétitifs et service client exceptionnel.',

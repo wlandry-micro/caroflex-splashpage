@@ -54,7 +54,7 @@ const translations = {
     'contact.form.service': 'Service Needed',
     'contact.form.message': 'Project Details',
     'contact.form.messagePlaceholder': 'Tell us about your project - quantity, design ideas, timeline, etc.',
-    'contact.form.submit': 'Get Free Quote',
+    'contact.form.submit': 'Get Quote',
     'contact.visit.title': 'Visit Our Shop',
     'contact.call.title': 'Call Us',
     'contact.email.title': 'Email Us',
@@ -65,7 +65,7 @@ const translations = {
     'footer.portfolio': 'Portfolio',
     'footer.contact': 'Contact',
     'footer.quote': 'Get Quote',
-    'footer.copyright': '© 2024 CaroFlex Printing. All rights reserved. | Bringing your designs to life, one print at a time.'
+    'footer.copyright': '© 2025 CaroFlex Printing. All rights reserved. | Bringing your designs to life, one print at a time.'
   },
   fr: {
     // Hero section
@@ -111,7 +111,7 @@ const translations = {
     'contact.form.service': 'Service Requis',
     'contact.form.message': 'Détails du Projet',
     'contact.form.messagePlaceholder': 'Parlez-nous de votre projet - quantité, idées de design, délais, etc.',
-    'contact.form.submit': 'Obtenir un Devis Gratuit',
+    'contact.form.submit': 'Obtenir un Devis',
     'contact.visit.title': 'Visitez Notre Boutique',
     'contact.call.title': 'Appelez-Nous',
     'contact.email.title': 'Envoyez-nous un Email',
@@ -122,7 +122,7 @@ const translations = {
     'footer.portfolio': 'Portfolio',
     'footer.contact': 'Contact',
     'footer.quote': 'Obtenir un Devis',
-    'footer.copyright': '© 2024 CaroFlex Printing. Tous droits réservés. | Donnons vie à vos designs, une impression à la fois.'
+    'footer.copyright': '© 2025 CaroFlex Printing. Tous droits réservés. | Donnons vie à vos designs, une impression à la fois.'
   }
 };
 

@@ -33,7 +33,7 @@ const Portfolio = () => {
     {
       title: "Uniform Embroidery",
       category: "Embroidery",
-      image: "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=400&h=300&fit=crop&crop=center",
+      image: "/lovable-uploads/8a93ded7-5a49-4c70-bc22-aad75bbd0b43.png",
       description: "Professional uniform customization"
     }
   ];

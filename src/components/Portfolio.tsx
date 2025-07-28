@@ -10,7 +10,7 @@ const Portfolio = () => {
       title: "Corporate T-Shirts",
       category: "Screen Printing",
       image: "/lovable-uploads/b2561094-116e-4708-8f41-800c762edda3.png",
-      description: "Custom branded t-shirts for tech startup"
+      description: "Custom branded t-shirts for your business"
     },
     {
       title: "Sports Team Jerseys",

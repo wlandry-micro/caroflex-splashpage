@@ -27,7 +27,7 @@ const Portfolio = () => {
     {
       title: "Custom Hoodies",
       category: "Screen Printing",
-      image: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&h=300&fit=crop&crop=center",
+      image: "/lovable-uploads/2e7b7766-ab98-4436-a8f3-0415f6440c63.png",
       description: "Personalized hoodies for local business"
     },
     {

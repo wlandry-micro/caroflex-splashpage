@@ -9,13 +9,13 @@ const Portfolio = () => {
     {
       title: "Corporate T-Shirts",
       category: "Screen Printing",
-      image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=300&fit=crop&crop=center",
+      image: "/custom-tshirts-1.jpeg",
       description: "Custom branded t-shirts for tech startup"
     },
     {
       title: "Sports Team Jerseys",
       category: "Embroidery",
-      image: "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=400&h=300&fit=crop&crop=center",
+      image: "/sport-team-jersey-1.jpeg",
       description: "Professional jerseys with team logos"
     },
     {
@@ -35,12 +35,6 @@ const Portfolio = () => {
       category: "Embroidery",
       image: "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=400&h=300&fit=crop&crop=center",
       description: "Professional uniform customization"
-    },
-    {
-      title: "Band Merchandise",
-      category: "Heat Transfer",
-      image: "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=400&h=300&fit=crop&crop=center",
-      description: "Tour merchandise for local music artists"
     }
   ];
 

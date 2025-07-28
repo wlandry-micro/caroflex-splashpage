@@ -21,7 +21,7 @@ const Portfolio = () => {
     {
       title: "Event Merchandise",
       category: "Heat Transfer",
-      image: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=400&h=300&fit=crop&crop=center",
+      image: "/lovable-uploads/b442073e-aa26-4e80-93aa-a8095ef7a7c4.png",
       description: "Conference merchandise and promotional items"
     },
     {

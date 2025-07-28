@@ -15,7 +15,7 @@ const Portfolio = () => {
     {
       title: "Sports Team Jerseys",
       category: "Embroidery",
-      image: "/sport-team-jersey-1.jpeg",
+      image: "/lovable-uploads/fe01d45c-c14d-49e1-ae6a-a167cb88da21.png",
       description: "Professional jerseys with team logos"
     },
     {

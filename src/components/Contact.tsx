@@ -11,7 +11,7 @@ const Contact = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="py-20 bg-slate-900">
+    <section id="quote-form" className="py-20 bg-slate-900">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -28,40 +28,44 @@ const Contact = () => {
             <CardHeader>
               <CardTitle className="text-2xl text-slate-800">{t('contact.form.title')}</CardTitle>
             </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <Label htmlFor="name" className="text-slate-700">{t('contact.form.name')}</Label>
-                  <Input id="name" placeholder={t('contact.form.name')} className="mt-1" />
+            <CardContent>
+              <form method="POST" action="/sendmail.php" className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <Label htmlFor="name" className="text-slate-700">{t('contact.form.name')}</Label>
+                    <Input id="name" name="name" placeholder={t('contact.form.name')} className="mt-1" required />
+                  </div>
+                  <div>
+                    <Label htmlFor="email" className="text-slate-700">{t('contact.form.email')}</Label>
+                    <Input id="email" name="email" type="email" placeholder="your@email.com" className="mt-1" required />
+                  </div>
                 </div>
+                
                 <div>
-                  <Label htmlFor="email" className="text-slate-700">{t('contact.form.email')}</Label>
-                  <Input id="email" type="email" placeholder="your@email.com" className="mt-1" />
+                  <Label htmlFor="phone" className="text-slate-700">{t('contact.form.phone')}</Label>
+                  <Input id="phone" name="phone" placeholder="(555) 123-4567" className="mt-1" />
                 </div>
-              </div>
-              
-              <div>
-                <Label htmlFor="phone" className="text-slate-700">{t('contact.form.phone')}</Label>
-                <Input id="phone" placeholder="(555) 123-4567" className="mt-1" />
-              </div>
-              
-              <div>
-                <Label htmlFor="service" className="text-slate-700">{t('contact.form.service')}</Label>
-                <Input id="service" placeholder="Screen Printing, Embroidery, Heat Transfer..." className="mt-1" />
-              </div>
-              
-              <div>
-                <Label htmlFor="message" className="text-slate-700">{t('contact.form.message')}</Label>
-                <Textarea 
-                  id="message" 
-                  placeholder={t('contact.form.messagePlaceholder')}
-                  className="mt-1 min-h-[120px]"
-                />
-              </div>
-              
-              <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-lg">
-                {t('contact.form.submit')}
-              </Button>
+                
+                <div>
+                  <Label htmlFor="service" className="text-slate-700">{t('contact.form.service')}</Label>
+                  <Input id="service" name="service" placeholder="Screen Printing, Embroidery, Heat Transfer..." className="mt-1" />
+                </div>
+                
+                <div>
+                  <Label htmlFor="message" className="text-slate-700">{t('contact.form.message')}</Label>
+                  <Textarea 
+                    id="message" 
+                    name="message"
+                    placeholder={t('contact.form.messagePlaceholder')}
+                    className="mt-1 min-h-[120px]"
+                    required
+                  />
+                </div>
+                
+                <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-lg">
+                  {t('contact.form.submit')}
+                </Button>
+              </form>
             </CardContent>
           </Card>
 

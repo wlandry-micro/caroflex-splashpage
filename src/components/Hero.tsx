@@ -35,19 +35,25 @@ const Hero = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
+              asChild
               size="lg" 
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
             >
-              {t('hero.getQuote')}
-              <ArrowRight className="ml-2 w-5 h-5" />
+              <a href="#quote-form" aria-label="Get a custom quote">
+                {t('hero.getQuote')}
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
             </Button>
             
             <Button 
+              asChild
               variant="outline" 
               size="lg"
               className="border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-8 py-6 text-lg rounded-full transition-all duration-300"
             >
-              {t('hero.viewWork')}
+              <a href="#our-work" aria-label="View our work">
+                {t('hero.viewWork')}
+              </a>
             </Button>
           </div>
         </div>

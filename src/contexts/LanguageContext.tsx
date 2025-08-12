@@ -21,7 +21,7 @@ const translations = {
     // Services section
     'services.title': 'Our Services',
     'services.description': 'From screen printing to embroidery, we offer comprehensive custom apparel solutions for all your printing needs.',
-    'services.screenPrint.title': 'Screen Printing',
+    'services.screenPrint.title': 'DTF Printing',
     'services.screenPrint.description': 'High-quality screen printing for bulk orders. Perfect for events, teams, and promotional merchandise.',
     'services.screenPrint.feature1': 'Vibrant colors',
     'services.screenPrint.feature2': 'Durable prints',
@@ -78,7 +78,7 @@ const translations = {
     // Services section
     'services.title': 'Nos Services',
     'services.description': 'De la sérigraphie à la broderie, nous offrons des solutions complètes de vêtements personnalisés pour tous vos besoins d\'impression.',
-    'services.screenPrint.title': 'Sérigraphie',
+    'services.screenPrint.title': 'Impression DTF',
     'services.screenPrint.description': 'Sérigraphie de haute qualité pour les commandes en gros. Parfait pour les événements, équipes et marchandises promotionnelles.',
     'services.screenPrint.feature1': 'Couleurs vives',
     'services.screenPrint.feature2': 'Impressions durables',

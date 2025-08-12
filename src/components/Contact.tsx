@@ -71,6 +71,14 @@ const Contact = () => {
                     <Label htmlFor="email" className="text-slate-700">Your Email</Label>
                     <Input id="email" name="email" type="email" placeholder="Your Email" className="mt-1" required />
                   </div>
+                  <div>
+                    <Label htmlFor="phone" className="text-slate-700">Your Phone Number</Label>
+                    <Input id="phone" name="phone" type="tel" placeholder="Your Phone Number" className="mt-1" required />
+                  </div>
+                  <div>
+                    <Label htmlFor="requestType" className="text-slate-700">Request Type</Label>
+                    <Input id="requestType" name="requestType" placeholder="Request Type" className="mt-1" required />
+                  </div>
                 </div>
                 <div>
                   <Label htmlFor="message" className="text-slate-700">Your Message</Label>

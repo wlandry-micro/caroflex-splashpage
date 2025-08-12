@@ -5,10 +5,42 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { MapPin, Phone, Mail } from "lucide-react";
+import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Contact = () => {
   const { t } = useLanguage();
+
+  const [statusText, setStatusText] = useState("");
+  const [statusType, setStatusType] = useState<"success" | "error" | "">("");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    try {
+      const res = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: { Accept: "application/json" },
+      });
+      if (res.ok) {
+        setStatusType("success");
+        setStatusText("Thank you! Your quote request has been sent.");
+        form.reset();
+      } else {
+        const errorData = await res.json().catch(() => null);
+        setStatusType("error");
+        setStatusText(
+          (errorData && (errorData.error || errorData.message)) ||
+            "Oops! There was a problem sending your request."
+        );
+      }
+    } catch (error) {
+      setStatusType("error");
+      setStatusText("Network error. Please try again later.");
+    }
+  };
 
   return (
     <section id="quote-form" className="py-20 bg-slate-900">
@@ -29,42 +61,24 @@ const Contact = () => {
               <CardTitle className="text-2xl text-slate-800">{t('contact.form.title')}</CardTitle>
             </CardHeader>
             <CardContent>
-              <form method="POST" action="/sendmail.php" className="space-y-6">
+              <form id="quote-form" action="https://formspree.io/f/movlrwjy" method="POST" onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <Label htmlFor="name" className="text-slate-700">{t('contact.form.name')}</Label>
-                    <Input id="name" name="name" placeholder={t('contact.form.name')} className="mt-1" required />
+                    <Label htmlFor="name" className="text-slate-700">Your Name</Label>
+                    <Input id="name" name="name" placeholder="Your Name" className="mt-1" required />
                   </div>
                   <div>
-                    <Label htmlFor="email" className="text-slate-700">{t('contact.form.email')}</Label>
-                    <Input id="email" name="email" type="email" placeholder="your@email.com" className="mt-1" required />
+                    <Label htmlFor="email" className="text-slate-700">Your Email</Label>
+                    <Input id="email" name="email" type="email" placeholder="Your Email" className="mt-1" required />
                   </div>
                 </div>
-                
                 <div>
-                  <Label htmlFor="phone" className="text-slate-700">{t('contact.form.phone')}</Label>
-                  <Input id="phone" name="phone" placeholder="(555) 123-4567" className="mt-1" />
+                  <Label htmlFor="message" className="text-slate-700">Your Message</Label>
+                  <Textarea id="message" name="message" placeholder="Your Message" className="mt-1 min-h-[120px]" required />
                 </div>
-                
-                <div>
-                  <Label htmlFor="service" className="text-slate-700">{t('contact.form.service')}</Label>
-                  <Input id="service" name="service" placeholder="Screen Printing, Embroidery, Heat Transfer..." className="mt-1" />
-                </div>
-                
-                <div>
-                  <Label htmlFor="message" className="text-slate-700">{t('contact.form.message')}</Label>
-                  <Textarea 
-                    id="message" 
-                    name="message"
-                    placeholder={t('contact.form.messagePlaceholder')}
-                    className="mt-1 min-h-[120px]"
-                    required
-                  />
-                </div>
-                
-                <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-lg">
-                  {t('contact.form.submit')}
-                </Button>
+                <input type="hidden" name="_subject" value="New Quote Request from Caroflex.ca" />
+                <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-lg">Get Quote</Button>
+                <p id="form-status" className={`mt-2 font-semibold ${statusType === "success" ? "text-emerald-500" : statusType === "error" ? "text-red-500" : "text-slate-500"}`}>{statusText}</p>
               </form>
             </CardContent>
           </Card>
